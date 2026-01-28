@@ -1,7 +1,5 @@
 # Godot4-3D-Multiplayer-Multi-World
 
-Demo: https://maconly.atwebpages.com/html/World-Environment-Test.html
-
 Shows how to use Root Motion in the Godot 4 game engine:
 - Shows how to use animation tree with AnimationNodeBlendTree
 - Shows how to transition between animation states

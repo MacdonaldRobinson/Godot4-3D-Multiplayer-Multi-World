@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctai3uf0ytu67"]
+[gd_scene format=3 uid="uid://ctai3uf0ytu67"]
 
 [ext_resource type="Texture2D" uid="uid://dto0dugv7c7el" path="res://textures/rocky-dunes1-bl/rocky-dunes1_albedo.png" id="1_emcfo"]
-[ext_resource type="Script" path="res://lobby/Lobby.gd" id="1_ugqrq"]
+[ext_resource type="Script" uid="uid://cpbf66vlbobb5" path="res://lobby/Lobby.gd" id="1_ugqrq"]
 [ext_resource type="Theme" uid="uid://ctly6v5xdcdqo" path="res://ui/Theme.tres" id="2_bv8y4"]
 [ext_resource type="PackedScene" uid="uid://cquyprb3f0o57" path="res://ui/Overlays/ChatOverlay/ChatOverlay.tscn" id="4_f7ucu"]
 
@@ -14,25 +14,25 @@ uv1_triplanar = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_dmtd7"]
 size = Vector3(8.78439, 1, 8.56184)
 
-[node name="Lobby" type="Node3D"]
+[node name="Lobby" type="Node3D" unique_id=1993610212]
 script = ExtResource("1_ugqrq")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1699452200]
 transform = Transform3D(1, 0, 0, 0, 0.41856, 0, 0, 0, 1, 0, 0, 0)
 use_collision = true
 size = Vector3(13.9984, 1, 11.708)
 material = SubResource("StandardMaterial3D_372o4")
 
-[node name="PlayersContainer" type="Node3D" parent="."]
+[node name="PlayersContainer" type="Node3D" parent="." unique_id=660377065]
 unique_name_in_owner = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2146333843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7)
 current = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=935298743]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1540749220]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,14 +41,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_bv8y4")
 
-[node name="CharacterSelecter" type="Button" parent="CanvasLayer/Control"]
+[node name="CharacterSelecter" type="Button" parent="CanvasLayer/Control" unique_id=1862341864]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "< Character Selecter"
 
-[node name="HostJoinContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+[node name="HostJoinContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=16421403]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -63,120 +63,120 @@ offset_bottom = 118.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HostContainer" type="PanelContainer" parent="CanvasLayer/Control/HostJoinContainer"]
+[node name="HostContainer" type="PanelContainer" parent="CanvasLayer/Control/HostJoinContainer" unique_id=2066694878]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer" unique_id=1346771471]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer" unique_id=1177985818]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer" unique_id=1242212517]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2087297553]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1908028682]
 layout_mode = 2
 text = "Port"
 horizontal_alignment = 1
 
-[node name="HostPort" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="HostPort" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=955771249]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "54210"
 
-[node name="Host" type="Button" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Host" type="Button" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=513168304]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 text = "Host"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer" unique_id=877566995]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1056038225]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=965978611]
 layout_mode = 2
 text = "External IP"
 horizontal_alignment = 1
 
-[node name="HostExternalIP" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="HostExternalIP" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/HostContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=814281166]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 3
 editable = false
 
-[node name="JoinContainer" type="PanelContainer" parent="CanvasLayer/Control/HostJoinContainer"]
+[node name="JoinContainer" type="PanelContainer" parent="CanvasLayer/Control/HostJoinContainer" unique_id=1797370251]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer" unique_id=1070526669]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer" unique_id=1366981647]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer" unique_id=433180465]
 layout_mode = 2
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=68990692]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=37396355]
 layout_mode = 2
 text = "Port"
 horizontal_alignment = 1
 
-[node name="JoinPort" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="JoinPort" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=82932463]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "54210"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=931011336]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=638726094]
 layout_mode = 2
 text = "External IP"
 horizontal_alignment = 1
 
-[node name="JoinExternalIP" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="JoinExternalIP" type="TextEdit" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2058463869]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 32)
 layout_mode = 2
 text = "127.0.0.1"
 
-[node name="Join" type="Button" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer"]
+[node name="Join" type="Button" parent="CanvasLayer/Control/HostJoinContainer/JoinContainer/MarginContainer/VBoxContainer" unique_id=1267415384]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 text = "Join"
 
-[node name="WorldSelecter" type="VBoxContainer" parent="CanvasLayer/Control"]
+[node name="WorldSelecter" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1469892394]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 11
@@ -187,11 +187,11 @@ offset_left = -96.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="CanvasLayer/Control/WorldSelecter"]
+[node name="Control" type="Control" parent="CanvasLayer/Control/WorldSelecter" unique_id=1519786809]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/WorldSelecter/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/WorldSelecter/Control" unique_id=937403812]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -199,11 +199,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/WorldSelecter/Control/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/WorldSelecter/Control/VBoxContainer" unique_id=1058756656]
 layout_mode = 2
 text = "Select World"
 
-[node name="WorldList" type="ItemList" parent="CanvasLayer/Control/WorldSelecter/Control/VBoxContainer"]
+[node name="WorldList" type="ItemList" parent="CanvasLayer/Control/WorldSelecter/Control/VBoxContainer" unique_id=1286147158]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -211,27 +211,27 @@ item_count = 2
 item_0/text = "World1"
 item_1/text = "World2"
 
-[node name="StartGame" type="Button" parent="CanvasLayer/Control/WorldSelecter"]
+[node name="StartGame" type="Button" parent="CanvasLayer/Control/WorldSelecter" unique_id=14678323]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 text = "Start Game"
 
-[node name="ChatOverlay" parent="CanvasLayer/Control" instance=ExtResource("4_f7ucu")]
+[node name="ChatOverlay" parent="CanvasLayer/Control" unique_id=188630033 instance=ExtResource("4_f7ucu")]
 unique_name_in_owner = true
 layout_mode = 1
 offset_top = 312.0
 offset_right = -600.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1852746422]
 environment = SubResource("Environment_xww1p")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=740460794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.216, 1.55935)
 
-[node name="SpawnArea" type="Area3D" parent="."]
+[node name="SpawnArea" type="Area3D" parent="." unique_id=998255530]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnArea" unique_id=455787139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.05177)
 shape = SubResource("BoxShape3D_dmtd7")
 

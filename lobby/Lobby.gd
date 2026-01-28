@@ -22,8 +22,8 @@ class_name Lobby
 @onready var chat_overlay: ChatOverlay = %ChatOverlay
 
 var worlds: Dictionary = {
-	"Mountain" = "res://worlds/WorldOne/WorldOne.tscn",
 	"Garage" = "res://worlds/WorldTwo/WorldTwo.tscn",
+	"Mountain" = "res://worlds/WorldOne/WorldOne.tscn",
 }
 
 @onready var camera: Camera3D = $Camera3D
@@ -47,9 +47,9 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	camera.current = true
 	
+	
 	for world in worlds:
-		if world is String:
-			worlds_list.add_item(world)
+		worlds_list.add_item(world)
 	pass
 	
 	if NetworkState.is_server:

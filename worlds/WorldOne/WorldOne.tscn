@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bam21kk1efirk"]
+[gd_scene format=3 uid="uid://bam21kk1efirk"]
 
-[ext_resource type="Script" path="res://worlds/WorldOne/WorldOne.gd" id="1_cdv0c"]
+[ext_resource type="Script" uid="uid://dg0qnsnhvm76n" path="res://worlds/WorldOne/WorldOne.gd" id="1_cdv0c"]
 [ext_resource type="PackedScene" uid="uid://dt8pspf6ajxrc" path="res://camera-controller/CameraController.tscn" id="2_hqi6l"]
 [ext_resource type="PackedScene" uid="uid://c1ch3xmuffi8p" path="res://worlds/Areas/Mountain/Mountain.tscn" id="6_lkrw2"]
 [ext_resource type="PackedScene" uid="uid://cspwr8ncana77" path="res://interactables/chair/Chair.tscn" id="13_nd8qq"]
@@ -10,8 +10,8 @@
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_mi8p7"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bxms3"]
-seamless = true
 noise = SubResource("FastNoiseLite_mi8p7")
+seamless = true
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t477f"]
 sky_cover = SubResource("NoiseTexture2D_bxms3")
@@ -24,34 +24,34 @@ background_mode = 2
 background_energy_multiplier = 0.66
 sky = SubResource("Sky_eufno")
 
-[node name="WorldOne" type="Node3D"]
+[node name="WorldOne" type="Node3D" unique_id=21755465]
 script = ExtResource("1_cdv0c")
 
-[node name="CameraController" parent="." node_paths=PackedStringArray("camera_look_at_point") instance=ExtResource("2_hqi6l")]
+[node name="CameraController" parent="." unique_id=1284785242 node_paths=PackedStringArray("camera_look_at_point") instance=ExtResource("2_hqi6l")]
 camera_look_at_point = NodePath("../PlayersContainer/Player/CameraLookAtPoint")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=105135921]
 environment = SubResource("Environment_u1vc7")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=253525278]
 transform = Transform3D(-1, 1.08056e-08, -8.67524e-08, 0, 0.992332, 0.123601, 8.74228e-08, 0.123601, -0.992332, -0.296527, 3, -4.79848)
 
-[node name="Overlays" parent="." node_paths=PackedStringArray("camera_controller") instance=ExtResource("14_sy0gl")]
+[node name="Overlays" parent="." unique_id=1418351768 node_paths=PackedStringArray("camera_controller") instance=ExtResource("14_sy0gl")]
 camera_controller = NodePath("../CameraController")
 
-[node name="Chair" parent="." instance=ExtResource("13_nd8qq")]
+[node name="Chair" parent="." unique_id=1302393458 instance=ExtResource("13_nd8qq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6183, 3.76751, -9.99355)
 
-[node name="PlayersContainer" type="Node3D" parent="."]
+[node name="PlayersContainer" type="Node3D" parent="." unique_id=236089735]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37553, 91.3053, 0)
 
-[node name="Player" parent="PlayersContainer" node_paths=PackedStringArray("camera_controller", "overlays") instance=ExtResource("14_a81yp")]
+[node name="Player" parent="PlayersContainer" unique_id=989158761 node_paths=PackedStringArray("camera_controller", "overlays") instance=ExtResource("14_a81yp")]
 camera_controller = NodePath("../../CameraController")
 overlays = NodePath("../../Overlays")
 
-[node name="CameraLookAtPoint" type="Node3D" parent="PlayersContainer/Player"]
+[node name="CameraLookAtPoint" type="Node3D" parent="PlayersContainer/Player" unique_id=1561388992]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70377, 0)
 
-[node name="uploads_files_3116838_Mountain" parent="." instance=ExtResource("6_lkrw2")]
+[node name="uploads_files_3116838_Mountain" parent="." unique_id=346340262 instance=ExtResource("6_lkrw2")]
 
 [connection signal="OnInteracting" from="Chair" to="PlayersContainer/Player" method="_on_chair_on_interacting"]
